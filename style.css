@@ -1,5 +1,95 @@
-*{
+/* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+.contect-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: #f0f0f0;
+}
+.contact-nav .logo{
+background-color: orange;
+width: 50px;
+height: 100%;
+} */
+
+/* Main Container */
+  .section-container {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    width: 100%;
+    border: 1px solid #ccc; /* Optional: just to see the boundary */
+    font-family: Arial, sans-serif;
+  }
+
+  /* Left Side: Orange, 20% width */
+  .left-side {
+    width: 20%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 150px) 100%, 0% 100%);
+  
+  /* Optional: Push the logo left slightly so it doesn't hit the angle */
+  padding-right: 150px;
+  }
+
+  img {
+    /* font-size: 14px; */
+    height: 40%;
+    width: 40%;
+    /* font-weight: bold; */
+    /* color: white; */
+  }
+
+  /* Right Side: White, fills remaining space (80% total) */
+  .right-side {
+    flex: 1; /* This takes up the remaining space */
+    background-color: white;
+    display: flex;
+    justify-content: flex-end; /* Spaced evenly */
+    align-items: center;
+    
+  }
+
+  /* The Object Container */
+  .info-object {
+    display: flex;
+    flex-direction: column; /* Stack span and 2nd line vertically */
+    position: relative;
+    padding-left: 35px; /* Space for the icon */
+    padding-right:120px;
+  }
+
+  /* The Icon using :before */
+  .info-object:before {
+  content: ''; /* Must have content, even if empty */
+  display: inline-block; /* Or block, inline-flex, etc. */
+  width: 20px; /* Control size */
+  height: 20px;
+  background-image: url('/hero/phone-ringing-1-flat.svg');
+  background-size: contain; /* Or cover, or specific px */
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Align with text */
+  margin-right: 8px;     /* Spacing */
+  vertical-align: -6px;  /* Tweak this value to align with text baseline */
+  }
+
+  /* First line: Bold Span */
+  .info-object span {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  /* Second line: Normal text */
+  .info-object .details {
+    font-weight: normal;
+    font-size: 14px;
+    color: #666;
+  }
