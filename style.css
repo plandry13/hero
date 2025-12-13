@@ -3,18 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.contect-nav-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    background-color: #f0f0f0;
-}
-.contact-nav .logo{
-background-color: orange;
-width: 50px;
-height: 100%;
-} */
+
 
 /* Main Container */
   .section-container {
@@ -45,6 +34,7 @@ height: 100%;
     width: 40%;
     /* font-weight: bold; */
     /* color: white; */
+
   }
 
   /* Right Side: White, fills remaining space (80% total) */
@@ -69,7 +59,11 @@ height: 100%;
   /* The Icon using :before */
   .info-object:before {
   content: ''; /* Must have content, even if empty */
-  display: inline-block; /* Or block, inline-flex, etc. */
+  display: flex; /* Or block, inline-flex, etc. */
+  align-items: flex-start;
+  position:absolute;
+  left:0;
+  top:50%;
   width: 20px; /* Control size */
   height: 20px;
   background-image: url('/hero/phone-ringing-1-flat.svg');
